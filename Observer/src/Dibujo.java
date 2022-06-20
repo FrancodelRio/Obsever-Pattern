@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import static java.lang.Math.round;
+// El KeyListener, es ya de por si una clase con observer pattern, ya que los objetos observan el comportamiento del teclado y reaccionan acorde.
 
 public class Dibujo extends JFrame implements KeyListener {
 
@@ -130,6 +131,9 @@ public class Dibujo extends JFrame implements KeyListener {
         cuboPerspectiva(x2, 60, 100, unidad, Color.BLACK); //Cubo
     }
 
+
+    //Aqui se muestra donde se agregan los observadores y cuando una tecla es presionada, los valores de la posicion cambian.
+     
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == 37)//Flecha izquierda
         {x2 -= 10;}
